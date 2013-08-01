@@ -1,6 +1,6 @@
 {
   "name": "winssh",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Remote console access for Windows, with access/deny support.",
   "main": "index.js",
   "scripts": {
