@@ -1,7 +1,7 @@
 {
   "name": "winssh",
   "version": "0.0.0",
-  "description": "",
+  "description": "Remote console access for Windows, with access/deny support.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
