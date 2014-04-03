@@ -1,7 +1,7 @@
 winssh
 ======
 
-Node.js 'SSH-like' emulator for Windows, in less that 100 lines of code.
+Node.js 'SSH-like' server for Windows, in less that 100 lines of code.
 
 Does not provide any way of authentication (yet). Although you can set IP address allow/deny rules.
 
