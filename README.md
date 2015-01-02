@@ -12,20 +12,21 @@ Does not provide any way of authentication (yet). Although you can set IP addres
 # Usage
 
     > winssh
+    WinSSH server listening on port 22
+    Connect using: ssh 10.10.2.39 -p 22
 
-    WinSSH server listening on port 1232
-    Connect using: ssh 10.10.2.39 -p 1232
-
-Yes, that's right. There are a few options available:
+That's it! There are a few options available:
 
 	-p/--port [port]
 	-a/--allow [hosts]
 	-d/--deny [hosts]
 	-D/--debug
 
-    winssh -p 2222 # listens on port 2222
-    winssh -d 6.5.4.3 # denies access from IP 6.5.4.3
-    winssh -a 10.0.2.8,10.0.2.10 # allows access only from IPs 10.0.2.8 and 10.0.2.10
+You'd use them like this:
+
+    > winssh -p 2222 # listens on port 2222
+    > winssh -d 6.5.4.3 # denies access from IP 6.5.4.3
+    > winssh -a 10.0.2.8,10.0.2.10 # allows access only from IPs 10.0.2.8 and 10.0.2.10
 
 # Programatic use
 
