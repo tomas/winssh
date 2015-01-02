@@ -2,10 +2,13 @@
   "name": "winssh",
   "version": "0.0.1",
   "description": "Remote console access for Windows, with access/deny support.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "optimist": "^0.6.1"
+  }
 }

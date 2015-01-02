@@ -1,0 +1,53 @@
+#!/usr/bin/env node
+
+var winssh = require('..'),
+    utils  = require('../lib/utils'),
+    argv   = require('optimist').argv;
+
+if (argv.h || argv.help)
+  return usage();
+
+function usage() {
+  console.log(' Usage: winssh [options]\n\n Options:');
+
+  console.log('\t-p/--port [port]');
+  console.log('\t-a/--allow [hosts]');
+  console.log('\t-d/--deny [hosts]');
+  console.log('\t-D/--debug');
+
+  console.log('\n Examples:');
+  console.log('\twinssh -p 2222');
+  console.log('\twinssh -a 10.0.2.8,10.0.2.10');
+  process.exit(1);
+}
+
+var opts  = {},
+    port  = argv.p || argv.port,
+    allow = argv.a || argv.allow,
+    deny  = argv.d || argv.deny,
+    debug = argv.D || argv.debug;
+
+if (port)
+  opts.port  = port;
+
+if (allow)
+  opts.allow = allow.split(',');
+
+if (deny)
+  opts.deny  = deny.split(',');
+
+if (debug)
+  opts.debug = true;
+
+winssh.start(opts, function(err, server) {
+  if (err)
+    return console.log(err.message);
+
+  var port = server.address().port;
+  utils.get_private_ips(function(err, list) {
+
+    console.log('WinSSH server listening on port ' + port);
+    if (list && list[0]) console.log('Connect using: ssh ' + list[0] + ' -p ' + port);
+
+  })
+})
