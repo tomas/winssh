@@ -41,7 +41,6 @@ winssh.start(function(err, server) {
     console.log('Server listening on port ' + server.address().port); // by default, port 22
 });
 
-``` js
 var options = {
   port: 2345,
   allow: [ '10.0.2.2' ]
