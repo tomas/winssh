@@ -3,7 +3,7 @@ winssh
 
 Node.js 'SSH-like' server for Windows, in less that 100 lines of code.
 
-Does not provide any way of authentication (yet). Although you can set IP address allow/deny rules.
+Does not provide any way of authentication (yet). You _can_ set allow/deny rules for IP addresses, though.
 
 # Installation
 
